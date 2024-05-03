@@ -11,3 +11,6 @@ Probability of gussing the genesis Block private keys is 1.1579209×10e-77
 Chances of guessing a private key if a billion keys are checked per second: 3.67×10e60 years.
 
 Chanced of guessing a private key if used a 442 petaFLOPS super computer: 5.797786825×10 −16seconds
+
+
+Since finding collision on the SHA256 functions is harder. It makes the problem much easier if we followed the secp256k1 elliptic curve
