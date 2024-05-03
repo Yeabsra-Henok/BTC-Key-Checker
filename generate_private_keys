@@ -1,0 +1,33 @@
+import secrets
+import binascii
+
+def generate_private_key():
+    # Generate a random 32-byte (256-bit) private key
+    private_key = secrets.token_bytes(32)
+    return private_key
+
+def write_to_file(keys):
+    with open("keys.txt", "w") as file:
+        for key in keys:
+            hex_private_key = binascii.hexlify(key).decode()
+            file.write(f"{hex_private_key}\n")
+
+def main():
+    try:
+        num_keys = int(input("Enter the number of private keys to generate: "))
+        if num_keys <= 0:
+            print("Please enter a positive number.")
+            return
+    except ValueError:
+        print("Invalid input. Please enter a positive integer.")
+        return
+    
+    private_keys = [generate_private_key() for _ in range(num_keys)]
+    write_to_file(private_keys)
+
+    for i, private_key in enumerate(private_keys, start=1):
+        hex_private_key = binascii.hexlify(private_key).decode()
+        print(f"Private Key {i}: {hex_private_key}")
+
+if __name__ == "__main__":
+    main()
