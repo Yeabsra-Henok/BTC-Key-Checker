@@ -10,7 +10,7 @@ BitcoinKeyBalanceChecker is a Python project that generates Bitcoin private keys
 
 The project aims to provide a simple tool for users to generate Bitcoin private keys and verify the balances associated with them, enhancing their understanding of Bitcoin and blockchain technology.
 
-## Future Plans
+## Assembly
 
 I plan to move this project to Assembly language for faster speed and more control over CPU and GPU memory.
 
